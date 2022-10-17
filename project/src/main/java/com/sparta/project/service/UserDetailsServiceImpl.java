@@ -1,8 +1,9 @@
 package com.sparta.project.service;
 
-import com.example.intermediate.domain.Member;
-import com.example.intermediate.domain.UserDetailsImpl;
-import com.example.intermediate.repository.MemberRepository;
+
+import com.sparta.project.entity.Member;
+import com.sparta.project.entity.UserDetailsImpl;
+import com.sparta.project.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,6 +1,6 @@
 package com.sparta.project.entity;
 
-import com.example.intermediate.shared.Authority;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

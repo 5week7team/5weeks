@@ -1,21 +1,19 @@
 package com.sparta.project.service;
 
-import com.example.intermediate.controller.response.MemberResponseDto;
-import com.example.intermediate.domain.Member;
-import com.example.intermediate.domain.RefreshToken;
-import com.example.intermediate.controller.request.LoginRequestDto;
-import com.example.intermediate.controller.request.MemberRequestDto;
-import com.example.intermediate.controller.response.ResponseDto;
-import com.example.intermediate.controller.request.TokenDto;
-import com.example.intermediate.jwt.TokenProvider;
-import com.example.intermediate.repository.MemberRepository;
+
 import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.sparta.project.dto.request.LoginRequestDto;
+import com.sparta.project.dto.request.MemberRequestDto;
+import com.sparta.project.dto.request.TokenDto;
+import com.sparta.project.dto.response.MemberResponseDto;
+import com.sparta.project.dto.response.ResponseDto;
+import com.sparta.project.entity.Member;
+import com.sparta.project.jwt.TokenProvider;
+import com.sparta.project.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,7 +1,9 @@
 package com.sparta.project.repository;
 
-import com.example.intermediate.domain.Member;
+
 import java.util.Optional;
+
+import com.sparta.project.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {

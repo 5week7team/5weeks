@@ -1,9 +1,10 @@
 package com.sparta.project.configuration;
 
-import com.example.intermediate.jwt.AccessDeniedHandlerException;
-import com.example.intermediate.jwt.AuthenticationEntryPointException;
-import com.example.intermediate.jwt.TokenProvider;
-import com.example.intermediate.service.UserDetailsServiceImpl;
+
+import com.sparta.project.jwt.AccessDeniedHandlerException;
+import com.sparta.project.jwt.AuthenticationEntryPointException;
+import com.sparta.project.jwt.TokenProvider;
+import com.sparta.project.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
