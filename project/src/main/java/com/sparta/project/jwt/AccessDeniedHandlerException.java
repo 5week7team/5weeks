@@ -18,7 +18,7 @@ public class AccessDeniedHandlerException implements AccessDeniedHandler {
 
   @Override
   public void handle(HttpServletRequest request, HttpServletResponse response,
-      AccessDeniedException accessDeniedException) throws IOException {
+      AccessDeniedException accessDeniedException) throws IOException, java.io.IOException {
     response.setContentType("application/json;charset=UTF-8");
     response.getWriter().println(
         new ObjectMapper().writeValueAsString(

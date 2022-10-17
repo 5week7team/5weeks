@@ -7,6 +7,7 @@ import com.sparta.project.entity.Member;
 import com.sparta.project.entity.RefreshToken;
 import com.sparta.project.entity.UserDetailsImpl;
 import com.sparta.project.repository.RefreshTokenRepository;
+import com.sparta.project.shared.Authority;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

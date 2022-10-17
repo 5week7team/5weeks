@@ -19,7 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Member extends Timestamped {
+public class Member extends TimeStamped {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
