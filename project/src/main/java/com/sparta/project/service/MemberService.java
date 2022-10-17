@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-package com.sparta.project.service;
 
-public class MemberService {
-}
-=======
 package com.sparta.project.service;
 
 
@@ -112,4 +107,4 @@ public class MemberService {
     }
 
 }
->>>>>>> 8fb9b0cf1eef95e60ba4a35cb15c831a09a3bb98
+

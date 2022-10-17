@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class RefreshToken extends Timestamped {
+public class RefreshToken extends TimeStamped {
 
     @Id
     @Column(nullable = false)

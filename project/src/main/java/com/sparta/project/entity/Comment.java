@@ -1,12 +1,16 @@
 package com.sparta.project.entity;
 
 import com.sparta.project.dto.request.CommentRequestDto;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Getter
 public class Comment extends TimeStamped {
@@ -17,24 +21,23 @@ public class Comment extends TimeStamped {
     private Long id;        // 댓글 고유 id
 
     // OneToMany
-    @Column (name = "postId", nullable = false)
-    private Long postId;    // 댓글이 달린 게시글 id
+    @JoinColumn(name = "member_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Member member;
 
+    @JoinColumn(name = "post_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Post post;
     @Column (name = "comment", nullable = false)
     private String comment;  // 댓글
 
-    @ManyToOne
-    @JoinColumn (name = "user_id", nullable = false)
-    private Member member;  // 댓글 작성자
 
-    public Comment(CommentRequestDto commentRequestDto, Member member) {
-        this.postId = commentRequestDto.getPostId();
-        this.comment = commentRequestDto.getComment();
-        this.member = member;
-    }
+
 
     public void update(CommentRequestDto commentRequestDto) {
-        this.postId = commentRequestDto.getPostId();
         this.comment = commentRequestDto.getComment();
+    }
+    public boolean validateMember(Member member) {
+        return !this.member.equals(member);
     }
 }

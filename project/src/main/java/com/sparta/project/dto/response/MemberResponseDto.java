@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-package com.sparta.project.dto.response;
-
-public class MemberResponseDto {
-}
-=======
 package com.sparta.project.dto.response;
 
 import lombok.AllArgsConstructor;
@@ -23,4 +17,4 @@ public class MemberResponseDto {
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
 }
->>>>>>> 8fb9b0cf1eef95e60ba4a35cb15c831a09a3bb98
+

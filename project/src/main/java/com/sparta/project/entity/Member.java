@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-package com.sparta.project.entity;
-
-public class Member {
-}
-=======
 package com.sparta.project.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -13,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.sparta.project.entity.TimeStamped;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -59,4 +55,4 @@ public class Member extends TimeStamped {
         return passwordEncoder.matches(password, this.password);
     }
 }
->>>>>>> 8fb9b0cf1eef95e60ba4a35cb15c831a09a3bb98
+

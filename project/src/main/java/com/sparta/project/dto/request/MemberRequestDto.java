@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-package com.sparta.project.dto.request;
-
-public class MemberRequestDto {
-}
-=======
 package com.sparta.project.dto.request;
 
 import javax.validation.constraints.NotBlank;
@@ -33,4 +27,4 @@ public class MemberRequestDto {
     private String passwordConfirm;
 }
 
->>>>>>> 8fb9b0cf1eef95e60ba4a35cb15c831a09a3bb98
+

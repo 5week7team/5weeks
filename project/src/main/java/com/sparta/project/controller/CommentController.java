@@ -2,40 +2,45 @@ package com.sparta.project.controller;
 
 import com.sparta.project.dto.request.CommentRequestDto;
 import com.sparta.project.dto.response.CommentResponseDto;
+import com.sparta.project.dto.response.ResponseDto;
+import com.sparta.project.entity.UserDetailsImpl;
 import com.sparta.project.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
 public class CommentController {
     private final CommentService commentService;
+    private final UserDetailsImpl userDetailImpl;
 
     //댓글 쓰기
-    @PostMapping("/api/auth/comment")
-    public CommentResponseDto createComment(@RequestBody CommentRequestDto commentRequestDto, @AuthenticationPrincipal UserDetailImpl userDetailImpl) {
-        return commentService.createComment(commentRequestDto, userDetailImpl.getMembername());
+    @PostMapping( "/api/auth/comment")
+    public ResponseDto<?> createComment(@RequestBody CommentRequestDto requestDto,
+                                        HttpServletRequest request) {
+        return commentService.createComment(requestDto, request);
     }
 
-    //댓글 수정
-    @PostMapping("/api/auth/comment/{id}")
-    public CommentResponseDto updateComment(@PathVariable Long id, @RequestBody CommentRequestDto commentRequestDto, @AuthenticationPrincipal UserDetailImpl userDetailImpl) throws IllegalAccessException {
-        return commentService.updateComment(id, commentRequestDto, userDetailImpl.getUsername());
-    }
-
-    //댓글 삭제
-    @DeleteMapping("/api/auth/comment/{id}")
-    public String deleteComment(@PathVariable Long id, @AuthenticationPrincipal UserDetailImpl userDetailImpl) {
-        return commentService.deleteComment(id, userDetailImpl.getUsername());
-    }
-
-
-    //댓글 전체목록 보기
     @GetMapping("/api/comment/{id}")
-    public List<CommentResponseDto> getCommentAllOfPost(@PathVariable Long id) {
-        return commentService.getCommentAllOfPost(id);
+    public ResponseDto<?> getAllComments(@PathVariable Long id) {
+
+        return commentService.getAllCommentsByPost(id);
+    }
+
+    @PutMapping( "/api/auth/comment/{id}")
+    public ResponseDto<?> updateComment(@PathVariable Long id, @RequestBody CommentRequestDto requestDto,
+                                        HttpServletRequest request) {
+        return commentService.updateComment(id, requestDto, request);
+    }
+
+    @DeleteMapping( "/api/auth/comment/{id}")
+    public ResponseDto<?> deleteComment(@PathVariable Long id,
+                                        HttpServletRequest request) {
+        return commentService.deleteComment(id, request);
     }
 }
