@@ -66,18 +66,18 @@ public class LikeService {
     @Transactional
     public ResponseDto<?> deleteLike(LikeRequestDto requestDto, UserDetails userDetails) {
 
-        Optional<PostLike> optionalPostHeart = likeRepository.findByPost_IdAndMember_Id(
+        Optional<PostLike> optionalLike = likeRepository.findByPost_IdAndMember_Id(
                 requestDto.getPostId(), requestDto.getMemberId());
         //좋아요가 눌려있지 않다면
-        if (optionalPostHeart.isEmpty()) {
+        if (optionalLike.isEmpty()) {
             throw new IllegalArgumentException("좋아요를 누르지 않으셨습니다.");
         }
-        Member membercheck = optionalPostHeart.get().getMember();
+        Member membercheck = optionalLike.get().getMember();
         //누른게 로그인한 사람이 아니라면
         if (!userDetails.getUsername().equals(membercheck.getNickname())) {
             throw new IllegalArgumentException("일치하는 회원이 아닙니다");
         }
-        likeRepository.delete(optionalPostHeart.get());
+        likeRepository.delete(optionalLike.get());
         return ResponseDto.success("좋아요취소.");
     }
 
