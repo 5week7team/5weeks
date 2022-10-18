@@ -18,9 +18,9 @@ public class PostController {
     private final PostRepository postRepository;
 
     @PostMapping( "/api/auth/post")
-    public ResponseDto<?> createPost(@RequestPart MultipartFile multipartFile, @RequestPart PostRequestDto requestDto,
+    public ResponseDto<?> createPost(@RequestBody PostRequestDto requestDto,
                                      HttpServletRequest request) {
-        return postService.createPost(multipartFile, requestDto, request);
+        return postService.createPost(requestDto, request);
     }
 
     @GetMapping( "/api/post/{id}")
@@ -44,4 +44,10 @@ public class PostController {
                                      HttpServletRequest request) {
         return postService.deletePost(id, request);
     }
+
+    @GetMapping( "/api/member/mypage")
+    public ResponseDto<?> mypage(HttpServletRequest request) {
+        return postService.getMyPage(request);
+    }
+
 }

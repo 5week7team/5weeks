@@ -2,6 +2,7 @@ package com.sparta.project.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import com.sparta.project.entity.Error;
 
 @Getter
 @AllArgsConstructor

@@ -29,8 +29,6 @@ public class Post extends TimeStamped {
     @Column(nullable = false)
     private int likenum;
 
-    @Column(nullable = false)
-    private String Url;
     //fetch는 읽어오기 전략, LAZY는 필요할 때(사용하는 구간에 트랜젝션), EAGER은 항상
     @OneToMany(mappedBy = "post", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments;

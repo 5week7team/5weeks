@@ -11,11 +11,12 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class MemberResponseDto {
+public class PostAllResponseDto {
     private Long id;
-    private String nickname;
-    private String email;
+    private String title;
+    private String content;
+    private String author;
+    private Long Comment;
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
 }
-
