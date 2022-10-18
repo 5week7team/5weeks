@@ -29,7 +29,7 @@ public class PostService {
     private final TokenProvider tokenProvider;
 
     @Transactional
-    public ResponseDto<?> createPost(MultipartFile multipartFile, PostRequestDto requestDto, HttpServletRequest request) {
+    public ResponseDto<?> createPost(PostRequestDto requestDto, HttpServletRequest request) {
         if (null == request.getHeader("Refresh-Token")) {
             return ResponseDto.fail("MEMBER_NOT_FOUND",
                     "로그인이 필요합니다.");
@@ -58,6 +58,7 @@ public class PostService {
                         .title(post.getTitle())
                         .content(post.getContent())
                         .nickname(post.getMember().getNickname())
+                        .likenum(post.getLikenum())
                         .createdAt(post.getCreatedAt())
                         .modifiedAt(post.getModifiedAt())
                         .build()
@@ -79,6 +80,7 @@ public class PostService {
                         .content(post.getContent())
                         .commentResponseDtoList(commentByPost(post, post.getMember()))
                         .nickname(post.getMember().getNickname())
+                        .likenum(post.getLikenum())
                         .createdAt(post.getCreatedAt())
                         .modifiedAt(post.getModifiedAt())
                         .build()
@@ -96,6 +98,7 @@ public class PostService {
                             .title(post.getTitle())
                             .content(post.getContent())
                             .nickname(post.getMember().getNickname())
+                            .likenum(post.getLikenum())
                             .commentResponseDtoList(commentByPost(post, post.getMember()))
                             .createdAt(post.getCreatedAt())
                             .modifiedAt(post.getModifiedAt())
@@ -199,5 +202,41 @@ public class PostService {
         }
 
         return commentResponseDtos;
+    }
+
+    @Transactional
+    public ResponseDto<?> getMyPage(HttpServletRequest request) {
+        if (null == request.getHeader("Refresh-Token")) {
+            return ResponseDto.fail("MEMBER_NOT_FOUND",
+                    "로그인이 필요합니다.");
+        }
+        if (null == request.getHeader("Authorization")) {
+            return ResponseDto.fail("MEMBER_NOT_FOUND",
+                    "로그인이 필요합니다.");
+        }
+        Member member = validateMember(request);
+        if (null == member) {
+            return ResponseDto.fail("INVALID_TOKEN", "Token이 유효하지 않습니다.");
+        }
+
+        List<Post> postList = postRepository.findAllByMember(member);
+
+        List<PostResponseDto> responseDtos = new ArrayList<>();
+        for (Post post : postList) {
+            responseDtos.add(
+                    PostResponseDto.builder()
+                            .id(post.getId())
+                            .title(post.getTitle())
+                            .content(post.getContent())
+                            .nickname(post.getMember().getNickname())
+                            .likenum(post.getLikenum())
+                            .commentResponseDtoList(commentByPost(post,post.getMember()))
+                            .createdAt(post.getCreatedAt())
+                            .modifiedAt(post.getModifiedAt())
+                            .build()
+            );
+        }
+        return ResponseDto.success(responseDtos);
+
     }
 }

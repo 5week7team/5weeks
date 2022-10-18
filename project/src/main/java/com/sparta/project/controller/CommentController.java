@@ -17,7 +17,6 @@ import java.util.List;
 @RestController
 public class CommentController {
     private final CommentService commentService;
-    private final UserDetailsImpl userDetailImpl;
 
     //댓글 쓰기
     @PostMapping( "/api/auth/comment")

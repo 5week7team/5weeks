@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class MemberRequestDto {
 
-    @NotBlank(message = "{member.nickname.notblank}")
-    @Size(min = 4, max = 12, message = "{member.nickname.size}")
-    @Pattern(regexp = "[a-z\\d]*${3,12}", message = "{member.nickname.pattern}")
+   @NotBlank(message = "비밀번호")
+    @Size(min = 4, max = 12, message = "11")
+    @Pattern(regexp = "[a-z\\d]*${3,12}", message = "22")
     private String nickname;
 
-    @NotBlank(message = "{member.password.notblank}")
-    @Size(min = 8, max = 20, message = "{member.password.size}")
+    @NotBlank(message = "123")
+    @Size(min = 8, max = 20, message = "33")
     @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\\d~!@#$%^&*()+|=]{8,16}$"
-            , message = "{member.password.pattern}")
+            , message = "44")
     private String password;
 
     @NotBlank
