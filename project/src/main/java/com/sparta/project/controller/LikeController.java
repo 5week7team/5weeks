@@ -18,13 +18,13 @@ public class LikeController {
 
     private final LikeService likeService;
 
-    @PostMapping("/api/auth/like")
+    @PostMapping("/api/auth/like/{id}")
     public ResponseDto<?> createLike (@RequestBody LikeRequestDto requestDto, @AuthenticationPrincipal UserDetails userDetails) {
 
         return likeService.createLike(requestDto, userDetails);
     }
 
-    @DeleteMapping("/api/auth/like")
+    @DeleteMapping("/api/auth/like/{id}")
     public ResponseDto<?> deleteLike (@RequestBody LikeRequestDto requestDto, @AuthenticationPrincipal UserDetails userDetails) {
         return likeService.deleteLike(requestDto, userDetails);
     }

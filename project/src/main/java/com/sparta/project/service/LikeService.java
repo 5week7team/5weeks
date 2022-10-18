@@ -1,7 +1,6 @@
 package com.sparta.project.service;
 
 import com.sparta.project.dto.request.LikeRequestDto;
-import com.sparta.project.dto.request.PostRequestDto;
 import com.sparta.project.dto.response.ResponseDto;
 import com.sparta.project.entity.PostLike;
 import com.sparta.project.entity.Member;
@@ -61,7 +60,7 @@ public class LikeService {
               .member(membercheck.get())
               .build();
       likeRepository.save(postLike);
-      return ResponseDto.success("좋아요를 눌렀습니다.");
+      return ResponseDto.success("좋아요.");
    }
 
     @Transactional
@@ -79,7 +78,7 @@ public class LikeService {
             throw new IllegalArgumentException("일치하는 회원이 아닙니다");
         }
         likeRepository.delete(optionalPostHeart.get());
-        return ResponseDto.success("좋아요를 지우셨습니다.");
+        return ResponseDto.success("좋아요취소.");
     }
 
 }
