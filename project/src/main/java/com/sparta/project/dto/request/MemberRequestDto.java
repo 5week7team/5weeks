@@ -12,19 +12,22 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class MemberRequestDto {
 
-   @NotBlank(message = "비밀번호")
-    @Size(min = 4, max = 12, message = "11")
-    @Pattern(regexp = "[a-z\\d]*${3,12}", message = "22")
+
+    @NotBlank(message = "공백을 허용하지않습니다")
+    @Pattern(regexp = "/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i", message = "올바른 이메일형식이 아닙니다")
+    private String email;
+
+    @NotBlank(message = "공백을 허용하지않습니다")
+    @Size(min = 4, max = 12, message = "4자 이상 12자이하로 입력해주세요")
     private String nickname;
 
-    @NotBlank(message = "123")
-    @Size(min = 8, max = 20, message = "33")
+    @NotBlank(message = "공백을 허용하지않습니다")
+    @Size(min = 8, max = 20, message = "8자 이상 20자이하로 입력해주세요")
     @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\\d~!@#$%^&*()+|=]{8,16}$"
-            , message = "44")
+            , message = "비밀번호가 영어대소문자, 숫자, 특수문자를 모두 포함해주세요")
     private String password;
 
     @NotBlank
     private String passwordConfirm;
 }
-
 

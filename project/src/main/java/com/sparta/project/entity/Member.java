@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import com.sparta.project.entity.TimeStamped;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,6 +24,9 @@ public class Member extends TimeStamped {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false)
+    private String email;
 
     @Column(nullable = false)
     private String nickname;
@@ -55,4 +56,3 @@ public class Member extends TimeStamped {
         return passwordEncoder.matches(password, this.password);
     }
 }
-
