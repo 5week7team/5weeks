@@ -197,7 +197,6 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lhj" />
                       </list>
                     </value>
                   </entry>
@@ -208,13 +207,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="틀잡음" />
-    <option name="LAST_COMMIT_MESSAGE" value="틀잡음" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
