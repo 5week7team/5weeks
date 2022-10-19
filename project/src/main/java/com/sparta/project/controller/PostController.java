@@ -42,19 +42,40 @@ public class PostController {
     public ResponseDto<?> getAllPosts() {
         return postService.getAllPost();
     }
-
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "Refresh-Token",
+                    required = true,
+                    dataType = "string",
+                    paramType = "header"
+            )
+    })
     @PutMapping( "/api/auth/post/{id}")
     public ResponseDto<?> updatePost(@PathVariable Long id, @RequestBody PostRequestDto postRequestDto,
                                      HttpServletRequest request) {
         return postService.updatePost(id, postRequestDto, request);
     }
-
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "Refresh-Token",
+                    required = true,
+                    dataType = "string",
+                    paramType = "header"
+            )
+    })
     @DeleteMapping("/api/auth/post/{id}")
     public ResponseDto<?> deletePost(@PathVariable Long id,
                                      HttpServletRequest request) {
         return postService.deletePost(id, request);
     }
-
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "Refresh-Token",
+                    required = true,
+                    dataType = "string",
+                    paramType = "header"
+            )
+    })
     @GetMapping( "/api/member/mypage")
     public ResponseDto<?> mypage(HttpServletRequest request) {
         return postService.getMyPage(request);

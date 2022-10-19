@@ -39,13 +39,27 @@ public class CommentController {
 
         return commentService.getAllCommentsByPost(id);
     }
-
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "Refresh-Token",
+                    required = true,
+                    dataType = "string",
+                    paramType = "header"
+            )
+    })
     @PutMapping( "/api/auth/comment/{id}")
     public ResponseDto<?> updateComment(@PathVariable Long id, @RequestBody CommentRequestDto requestDto,
                                         HttpServletRequest request) {
         return commentService.updateComment(id, requestDto, request);
     }
-
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "Refresh-Token",
+                    required = true,
+                    dataType = "string",
+                    paramType = "header"
+            )
+    })
     @DeleteMapping( "/api/auth/comment/{id}")
     public ResponseDto<?> deleteComment(@PathVariable Long id,
                                         HttpServletRequest request) {
