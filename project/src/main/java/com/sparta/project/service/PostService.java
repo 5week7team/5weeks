@@ -7,9 +7,11 @@ import com.sparta.project.dto.response.ResponseDto;
 import com.sparta.project.entity.Comment;
 import com.sparta.project.entity.Member;
 import com.sparta.project.entity.Post;
+import com.sparta.project.entity.Postlike;
 import com.sparta.project.jwt.TokenProvider;
 import com.sparta.project.repository.CommentRepository;
 import com.sparta.project.repository.PostRepository;
+import com.sparta.project.repository.PostlikeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -27,6 +29,7 @@ public class PostService {
     private final PostRepository postRepository;
     private final CommentRepository commentRepository;
     private final TokenProvider tokenProvider;
+    private final PostlikeRepository postlikeRepository;
 
     @Transactional
     public ResponseDto<?> createPost(PostRequestDto requestDto, HttpServletRequest request) {
@@ -239,4 +242,5 @@ public class PostService {
         return ResponseDto.success(responseDtos);
 
     }
+
 }

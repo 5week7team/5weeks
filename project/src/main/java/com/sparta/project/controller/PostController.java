@@ -50,4 +50,6 @@ public class PostController {
         return postService.getMyPage(request);
     }
 
+
+
 }

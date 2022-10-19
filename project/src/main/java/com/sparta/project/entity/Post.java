@@ -45,4 +45,16 @@ public class Post extends TimeStamped {
     public boolean validateMember(Member member) {
         return !this.member.equals(member);
     }
+
+    public void pushLike()
+    {
+        this.likenum++;
+    }
+    public void pushDislike()
+    {
+        if(this.likenum>0)
+        {
+            this.likenum--;
+        }
+    }
 }
