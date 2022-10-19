@@ -5,7 +5,6 @@ import com.sparta.project.entity.Member;
 import com.sparta.project.entity.Post;
 import com.sparta.project.entity.Postlike;
 import com.sparta.project.jwt.TokenProvider;
-import com.sparta.project.repository.CommentRepository;
 import com.sparta.project.repository.MemberRepository;
 import com.sparta.project.repository.PostRepository;
 import com.sparta.project.repository.PostlikeRepository;
@@ -20,7 +19,6 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class LikeService {
-    private final MemberRepository memberRepository;
     private final PostRepository postRepository;
     private final TokenProvider tokenProvider;
     private final PostlikeRepository postlikeRepository;
@@ -69,7 +67,7 @@ public class LikeService {
             postlikeRepository.save(postlike);
         }
 
-        return ResponseDto.success("Push 'like' button");
+        return ResponseDto.success("좋아요!");
     }
     @Transactional
     public Post isPresentPost(Long id) {

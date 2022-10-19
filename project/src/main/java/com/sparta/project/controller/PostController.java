@@ -4,6 +4,8 @@ import com.sparta.project.dto.request.PostRequestDto;
 import com.sparta.project.dto.response.ResponseDto;
 import com.sparta.project.repository.PostRepository;
 import com.sparta.project.service.PostService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,6 +19,14 @@ public class PostController {
     private final PostService postService;
     private final PostRepository postRepository;
 
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "Refresh-Token",
+                    required = true,
+                    dataType = "string",
+                    paramType = "header"
+            )
+    })
     @PostMapping( "/api/auth/post")
     public ResponseDto<?> createPost(@RequestBody PostRequestDto requestDto,
                                      HttpServletRequest request) {

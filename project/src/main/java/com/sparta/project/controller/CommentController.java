@@ -5,6 +5,8 @@ import com.sparta.project.dto.response.CommentResponseDto;
 import com.sparta.project.dto.response.ResponseDto;
 import com.sparta.project.entity.UserDetailsImpl;
 import com.sparta.project.service.CommentService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,7 +19,14 @@ import java.util.List;
 @RestController
 public class CommentController {
     private final CommentService commentService;
-
+    @ApiImplicitParams({
+            @ApiImplicitParam(
+                    name = "Refresh-Token",
+                    required = true,
+                    dataType = "string",
+                    paramType = "header"
+            )
+    })
     //댓글 쓰기
     @PostMapping( "/api/auth/comment")
     public ResponseDto<?> createComment(@RequestBody CommentRequestDto requestDto,

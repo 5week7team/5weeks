@@ -29,9 +29,9 @@ public class MemberService {
 
     @Transactional
     public ResponseDto<?> createMember(MemberRequestDto requestDto) {
-        if (null != isPresentMember(requestDto.getNickname())) {
-            return ResponseDto.fail("DUPLICATED_NICKNAME",
-                    "중복된 닉네임 입니다.");
+        if (null != isPresentMember(requestDto.getEmail())) {
+            return ResponseDto.fail("DUPLICATED_EMAIL",
+                    "중복된 email 입니다.");
         }
 
         if (!requestDto.getPassword().equals(requestDto.getPasswordConfirm())) {
@@ -39,7 +39,8 @@ public class MemberService {
                     "비밀번호와 비밀번호 확인이 일치하지 않습니다.");
         }
 
-        Member member = Member.builder()
+        Member member = Member
+                .builder()
                 .email(requestDto.getEmail())
                 .nickname(requestDto.getNickname())
                 .password(passwordEncoder.encode(requestDto.getPassword()))
