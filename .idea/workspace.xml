@@ -4,29 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22d0e8e4-5729-47d0-9ce2-d4e0ed15b0f6" name="Changes" comment="틀잡음">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/5weeks.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/shared/Authority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.gradle/7.5/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.5/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+    <list default="true" id="22d0e8e4-5729-47d0-9ce2-d4e0ed15b0f6" name="Changes" comment="no commit">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/entity/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/entity/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/jwt/AccessDeniedHandlerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/jwt/AccessDeniedHandlerException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/jwt/TokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/jwt/TokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/project/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/configuration/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/controller/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/dto/request/LikeRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/dto/request/LikeRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/dto/response/LikeResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/dto/response/LikeResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/entity/PostLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/entity/PostLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/repository/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/sparta/project/service/LikeService.java" afterDir="false" />
     </list>
+    <list id="af64adc3-de05-4e63-b9ad-b884dcd095b0" name="no commit" comment="no commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,19 +121,38 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;23ff5e1ed443861eaca377495be7b2ec&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelOrder2": "2",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth2": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/gram/Desktop/항해 99 입문주차 6조 코드리뷰/항해 99 입문주차 6조 코드리뷰/post_1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "23ff5e1ed443861eaca377495be7b2ec"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gram\Desktop\5weeks\project\src\main" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sparta.project.shared" />
       <recent name="com.sparta.project.entity" />
@@ -141,7 +161,10 @@
       <recent name="com.sparta.project.dto.response" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ProjectApplication">
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="project.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.project.ProjectApplication" />
@@ -149,6 +172,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -165,6 +193,7 @@
       <workItem from="1665980487499" duration="3815000" />
       <workItem from="1665984494988" duration="2916000" />
       <workItem from="1665987558599" duration="2280000" />
+      <workItem from="1666138319687" duration="12998000" />
     </task>
     <task id="LOCAL-00001" summary="틀잡음">
       <created>1665978451003</created>
@@ -180,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665982829163</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="no commit">
+      <created>1666089822721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666089822721</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,8 +232,7 @@
                 <map>
                   <entry key="branch">
                     <value>
-                      <list>
-                      </list>
+                      <list />
                     </value>
                   </entry>
                 </map>
@@ -207,5 +242,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="no commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="no commit" />
   </component>
 </project>
