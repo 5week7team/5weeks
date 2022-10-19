@@ -14,7 +14,7 @@ public class MemberRequestDto {
 
 
     @NotBlank(message = "공백을 허용하지않습니다")
-    @Pattern(regexp = "/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i", message = "올바른 이메일형식이 아닙니다")
+    @Pattern(regexp = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$", message = "올바른 이메일형식이 아닙니다")
     private String email;
 
     @NotBlank(message = "공백을 허용하지않습니다")

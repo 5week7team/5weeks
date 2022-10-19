@@ -35,3 +35,4 @@ public class MemberController {
         return memberService.logout(request);
     }
 }
+
